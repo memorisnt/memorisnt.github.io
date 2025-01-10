@@ -9,7 +9,7 @@
 		
 		<!--Webpage info-->
 		<title>Memorisn't | Physics Sec/JC Tuition, Singapore</title>
-		<link rel="icon" type="image/png" href="/assets/favicon.png">
+		<link rel="icon" type="image/png" href="assets/favicon.png">
 		
 		<!--Reference resources-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -17,23 +17,30 @@
 	</head>
 	<body id="section_top">
 		<!--Navigation bar-->
-		<nav class="navbar navbar-expand-sm fixed-top bg-warning p-3" id="nav_main"> <!--declare navbar, collapses only at small breakpoint, fixed on top, yellow background, padding 3 on both xy axes -->
+		<nav class="navbar navbar-expand-sm fixed-top bg-body-tertiary px-5" id="nav_main"> <!--declare navbar, collapses only at small breakpoint, fixed on top, grey background, padding 5 on both x sides -->
 			<div class="container-fluid"> <!--width always device's max-->
 				<a class="navbar-brand" href="#">
-					<img src="/assets/logo.png" alt="Memorisn't" width="30" height="30"> <!--main brand button, its presence also pushes navbar toggle rightmost-->
+					<img src="assets/logo.png" alt="Memorisn't" height="70"> <!--main brand button, its presence also pushes navbar toggle rightmost-->
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_sub"
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="nav_sub">
-					<div class="navbar-nav">
-						<a class="nav-link" href="#section_about">About</a>
-						<a class="nav-link" href="#section_why">Why</a>
-						<a class="nav-link" href="#section_how">How</a>
-						<a class="nav-link" href="#section_contact">Contact</a>
+				<div class="collapse navbar-collapse" id="nav_sub"> <!-- using collapse class as a wrapper-->
+					<div class="navbar-nav ms-auto">
+						<a class="nav-link h2" href="#section_about">About</a>
+						<a class="nav-link h2" href="#section_why">Why</a>
+						<a class="nav-link h2" href="#section_how">How</a>
+						<a class="nav-link h2" href="#section_contact">Contact</a>
 					</div>
 				</div>
 			</div>
 		</nav>
+		
+		<!--Main content-->
+		<header class="container-fluid"> <!--width always device's max-->
+			<div class=h1>
+				<p>Hello</p>
+			</div>
+		</header>
 	</body>
 </html>
