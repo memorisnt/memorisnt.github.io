@@ -19,18 +19,18 @@
 		<!--Navigation bar-->
 		<nav class="navbar navbar-expand-sm fixed-top bg-body-tertiary px-5" id="nav_main"> <!--declare navbar, collapses only at small breakpoint, fixed on top, grey background, padding 5 on both x sides -->
 			<div class="container-fluid"> <!--width always device's max-->
-				<a class="navbar-brand" href="#">
+				<a class="navbar-brand" href="#"> <!--auto format a left aligned link for main brand button-->
 					<img src="assets/logo.png" alt="Memorisn't" height="70"> <!--main brand button, its presence also pushes navbar toggle rightmost-->
 				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_sub"
-					<span class="navbar-toggler-icon"></span>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_sub" <!--toggle hamburger menu button-->
+					<span class="navbar-toggler-icon"></span> <!--icon for hamburger menu button-->
 				</button>
 				<div class="collapse navbar-collapse" id="nav_sub"> <!-- using collapse class as a wrapper-->
 					<div class="navbar-nav ms-auto">
-						<a class="nav-link h2" href="#section_about">About</a>
-						<a class="nav-link h2" href="#section_why">Why</a>
-						<a class="nav-link h2" href="#section_how">How</a>
-						<a class="nav-link h2" href="#section_contact">Contact</a>
+						<a class="nav-link" href="#section_about"><h1>About</h1></a> <!--nested h2 font style-->
+						<a class="nav-link" href="#section_why"><h2>Why</h2></a> <!--nested h2 font style-->
+						<a class="nav-link" href="#section_how"><h3>How</h3></a> <!--nested h2 font style-->
+						<a class="nav-link" href="#section_contact"><h4>Contact</h4></a> <!--nested h2 font style-->
 					</div>
 				</div>
 			</div>
