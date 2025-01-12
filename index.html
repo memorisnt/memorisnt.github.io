@@ -14,33 +14,172 @@
 		<!--Reference resources-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700">
+		
 	</head>
-	<body id="section_top">
+	
+	<body id="top">
+		<!--Note: all breakpoints chosen are sized md at 768px, synced with css-->
 		<!--Navigation bar-->
-		<nav class="navbar navbar-expand-sm fixed-top bg-body-tertiary px-5" id="nav_main"> <!--declare navbar, collapses only at small breakpoint, fixed on top, grey background, padding 5 on both x sides -->
-			<div class="container-fluid"> <!--width always device's max-->
-				<a class="navbar-brand" href="#"> <!--auto format a left aligned link for main brand button-->
-					<img src="assets/logo.png" alt="Memorisn't" height="70"> <!--main brand button, its presence also pushes navbar toggle rightmost-->
+		<nav class="navbar navbar-expand-md fixed-top" id="nav-main"> <!--navbar, collapses only at medium breakpoint, white background, fixed on top-->
+			<div class="container-fluid px-4"> <!--width always device's max-->
+				<a class="navbar-brand" href="#top"> <!--a left aligned link for main brand button-->
+					<img src="assets/logo.png" height="65rem" alt="Home Page"> <!--main brand button, its presence also pushes navbar toggle rightmost, alt-text included-->
 				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_sub" <!--toggle hamburger menu button-->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-sub" aria-controls="nav-sub" aria-expanded="false" aria-label="Toggle navigation"> <!--hamburger menu button toggle-->
 					<span class="navbar-toggler-icon"></span> <!--icon for hamburger menu button-->
 				</button>
-				<div class="collapse navbar-collapse" id="nav_sub"> <!-- using collapse class as a wrapper-->
-					<div class="navbar-nav ms-auto">
-						<a class="nav-link" href="#section_about"><h1>About</h1></a> <!--nested h2 font style-->
-						<a class="nav-link" href="#section_why"><h2>Why</h2></a> <!--nested h2 font style-->
-						<a class="nav-link" href="#section_how"><h3>How</h3></a> <!--nested h2 font style-->
-						<a class="nav-link" href="#section_contact"><h4>Contact</h4></a> <!--nested h2 font style-->
-					</div>
+				<div class="collapse navbar-collapse" id="nav-sub"> <!-- using collapse class as a wrapper-->
+					<ul class="navbar-nav ms-auto"> <!--sub navbar, right aligned, structure below is using nested item-link for future extensibility with dropdowns-->
+						<li class="nav-item ps-1"><a class="nav-link" href="#about">About Me</a></li>
+						<li class="nav-item ps-1"><a class="nav-link" href="#why">The Problem</a></li>
+						<li class="nav-item ps-1"><a class="nav-link" href="#probono">Giving Back</a></li>
+						<li class="nav-item ps-1"><a class="nav-link" href="#faq">FAQ</a></li>
+						<li class="nav-item ps-1"><a class="nav-link" href="#contact">Sign Up!</a></li>
+					</ul>
 				</div>
 			</div>
 		</nav>
 		
-		<!--Main content-->
-		<header class="container-fluid"> <!--width always device's max-->
-			<div class=h1>
-				<p>Hello</p>
+		<!--Masthead-->
+		<header class="container-fluid masthead"> <!--width always device's max so container is flushed, then makes background image styled in css and follows the container size-->
+			<h1 class="text-center line-scale py-md-2">Helping students</h1> <!--makes this line styled in css for responsive sizing, extra line buffer for widescreen-->
+			<div class="row justify-content-center text-center pb-5"> <!--first is to put all to arrange all boxes in the centre of the window, second is for text in each box to be centralised-->
+				<div class="col-md-auto mx-1 px-1"> <!--boxes side by side for widescreen but past breakpoint they stack up, buffers are to simulate an extra character space-->
+					<h1 class="display-2"><del>memorise</del></h1>
+				</div>
+				<div class="col-md-auto mx-1 px-1"> <!--same as above, but must be indicated separately-->
+					<span class="h1 display-2" id="cycled-word"><mark>learn</mark> </span> <!--makes this word change over time via javascript, trailing whitespace is important for spacing, INCOMPLETE-->
+					<span class="h1 display-2">Physics</span> <!--split up and used span to prevent extra line breaks and to isolate word to be changed-->
+				</div>
 			</div>
+			<div class="pt-md-5" style="text-align:center"> <!--padding with above to position button but only more for widescreen, bottom padding handled by css with masthead background-->
+				<a class="btn btn-lg rounded-pill border border-5 border-dark bg-accent line-scale px-4 px-md-5" href="#contact" role="button">Join today</a>
+			</div>
+			
 		</header>
+		
+		<!--Main content-->
+		<!--About Me-->
+		<section class="container py-5" id="about"> <!--vertical padding buffer just nice for scrollspy-->
+			<div class="row">
+				<div class="col-md-2">
+					<img class="rounded-circle mx-auto" src="assets/about.jpg" height="75rem" alt="About Me">
+				</div>
+				<div class="text-md-left col-md-10">
+					<h2>About Me<h2>
+					<h5><br>Hello! I'm an ex-MOE physics tutor who has taught in schools like RGS and SNGS.</h5>
+					<h6><br>Students like my lessons for my energy and how I make abstract concepts <mark>relatable, digestible and hence enjoyable!</mark></h6>
+					<h6>I believe constructing knowledge and developing skills are highly personal,
+					so I make the effort to <mark>connect with every student, diagnose their unique challenges,
+					and journey together</mark>, no matter how low things might be.</h6>
+				</div>
+			</div>
+		</section>
+		<!--The Problem-->
+		<section class="container py-5" id="why"> <!--vertical padding buffer just nice for scrollspy-->
+			<div class="row">
+				<div class="col-md-10">
+					<h2>The Problem</h2>
+					<h5><br>#1: Mass-produced, fast-food education.</h5>
+					<h6>There are many good schools and tuition centres out there, but class sizes can often be overloaded.
+					Even in large tuition centres, lessons are hence pre-decided, catering only to a perceived majority.</h6>
+					<h6>Physics deals with math, language, visualisation and application skills.
+					Hence, many end up falling behind based on their different weaknesses.
+					Introverts especially may not get the most out of the lesson.
+					Without sufficient attention and personalisation, many latent issues in learning can go undiscovered.</h6>
+					<h5><br>#2: Myopic and superficial focus on grades.</h5>
+					<h6>Many education places also focus on delivering content and exam grades.
+					While understandable, this may not produce transferrable success (e.g. from 1 subject to another) and long-term success in other areas of life (e.g. in university, jobs and in society).</h6>
+					<h6>Instead, a good time investment would be in developing important thinking skills, especially metacognitive skills.
+					This will naturally boost study and exam skills anyways, and often with greater success.</h6>
+					<h5><br># Finding a Solution #</h5>
+					<h6>I believe in the effectiveness of small group learning.
+					Hence, I tutor <mark>classes of up to 3 max</mark>, unless students form larger class with friends.
+					This allows me to better interact with and engage each child, especially those introverted like me!</h6>
+					<h6>I also believe in a <mark>medical consultative approach</mark>, and have used it to much success and positive feedback.
+					Grades are but a diagnosis of some deeper symptoms, such as poor study habits, inefficient study methodology, difficulties in focusing, or struggling to be motivated and on-task.
+					These symptoms in turn have root causes, such as not addressing perfectionism, attention deficiency, neurodivergence, personality triats that hinder learning, even neglecting of general well-being (especially sleep!)</mark>, and more.</h5>
+					<h6>Over the years, while I did help many in Physics, it was more exciting to go beyond to the roots.
+					With my <mark>qualifications in pedagogy, strong interest in psychology, years of experience and passion to help students succeed</mark> not just in Physics but in life, I have:
+					<ul>
+						<li>helped students understand themselves better.</li>
+						<li>have partnered with students and parents identify and tackle mitigating factors from the ground up.</li>
+						<li>guided students to become better at studying.</li>
+						<li>even helped one start their journey to recognising neurodivergence and eventually clinically diagnosing ADHD.</li>
+					</ul></h6>
+					<h6>I am excited to continue helping more, so join me if you're looking for this help for your child or for yourself!</h6>
+					
+				</div>
+				<div class="col-md-2">
+					<p><br></p>
+					<img class="rounded mx-auto" src="assets/why.jpg" height="100rem" alt="The Problem">
+				</div>
+			</div>
+		</section>
+		<!--Giving Back-->
+		<section class="container py-5" id="probono"> <!--vertical padding buffer just nice for scrollspy-->
+			<div class="row">
+				<div class="col-md-2">
+					<p><br></p>
+					<img class="rounded mx-auto" src="assets/probono.jpg" height="100rem" alt="Giving Back">
+				</div>
+				<div class="col-md-10">
+					<h2>Giving Back</h2>
+					<h6><br>My pro-bono focus is in helping students with visual impairment. Please reach out if you're looking to collaborate or find out more.</h6>
+					<h6>Shout-out to my fellow entreprenuer, the inspiring Jeniyanti Rijanto, who works diligently to help students with neurodivergence (we call them superpowers!).
+					Find out more at <a href=https://catchwiselearning.com/>Catchwise Learning<a>.</h6>
+				</div>
+			</div>
+		</section>
+		<!--FAQ-->
+		<section class="container py-5" id="faq"> <!--vertical padding buffer just nice for scrollspy-->
+			<div class="row">
+				<div class="col-md-10">
+					<h2>FAQ</h2>
+					<h5><br>Hello!</h5>
+					<h6>Questions and Answers</h6>
+					<h6>Will be updated soon! In the meantime, feel free to contact me and send me your questions in the channels below.</p></h6>
+				</div>
+				<div class="col-md-2">
+					<p><br></p>
+					<img class="rounded mx-auto" src="assets/profile.jpg" height="100rem" alt="faq">
+				</div>
+			</div>
+		</section>
+		<!--Sign Up-->
+		<section class="container py-5" id="contact"> <!--vertical padding buffer just nice for scrollspy-->
+			<div class="row">
+				<div class="col-md-10">
+					<h2>Sign Up</h2>
+					<h5><br>Memorisn't is located right outside Havelock MRT Exit 5!</h5>
+					<h6>Take a quick 30 seconds walk from the exit with the directions below.</h6>
+				</div>
+			</div>
+			<div class="row justify-content-center text-center py-3">
+				<div class="col-md-4">
+					<img class="img-fluid rounded" src="assets/direction-1.jpg" alt="Direction 1">
+				</div>
+				<div class="col-md-4">
+					<img class="img-fluid rounded" src="assets/direction-2.jpg" alt="Direction 2">
+				</div>
+				<div class="col-md-4">
+					<img class="img-fluid rounded" src="assets/direction-3.jpg" alt="Direction 3">
+				</div>
+			<iframe class="embed-responsive-item py-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8088032112178!2d103.8342156!3d1.2889233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1989c6509787%3A0xcabdfab8ff791a30!2sMemorisn&#39;t!5e0!3m2!1sen!2ssg!4v1736617846239!5m2!1sen!2ssg"
+			width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</section>
+		
+		<!--Footer-->
+		<footer class="bg-light">
+			<div class="container py-5 px-4">
+				<div class="small text-center text-muted">Copyright &copy; 2025 - Memorisn't</div>
+			</div>
+		</footer>
+		<!--Scripts-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="scripts.js"></script>
 	</body>
 </html>
