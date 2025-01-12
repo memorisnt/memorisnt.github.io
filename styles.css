@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/*!
+* Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
+*/
+
+/*general page setup*/
+:root {
+	--bs-font-sans-serif: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	--color-plain: rgba(30, 30, 30, 1);
+	--color-accent: rgba(255, 210, 0, 1);
+	--color-offwhite: rgba(255, 255, 250, 1);
+	--bs-highlight-bg: rgba(255, 210, 0, 0.65);
+}
+html {
+	height: 100%;
+	scroll-padding-top: calc(4.5rem - 1px);
+}
+body {
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-offwhite);
+}
+
+section {
+	line-height: 1.6rem;
+}
+
+/*navbar default, taking mobile screens as default*/
+#nav-main {
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	background-color: var(--color-offwhite);
+	transition: background-color 0.2s ease;
+}
+#nav-main .navbar-nav .nav-item .nav-link { /*sets the default font style*/
+	color: var(--color-plain);
+	font-family: var(--bs-font-sans-serif);
+	font-weight: 700;
+	font-size: 0.9rem;
+	padding: 0.75rem 0;
+}
+#nav-main .navbar-nav .nav-item .nav-link:hover, #nav-main .navbar-nav .nav-item .nav-link:active { /*sets the accent color for both cases*/
+	text-shadow: 0.1rem 0.1rem 0 var(--color-accent);
+}
+#nav-main .navbar-nav .nav-item .nav-link.active {
+	text-shadow: 0.1rem 0.1rem 0 var(--color-accent) !important; /*prevent overriding as the page is scrolled, doesn't work otherwise*/
+}
+
+/*when wide enough screen; value follows bootstrap's breakpoint, 576 for sm, 768 for md, 992 for lg*/
+@media (min-width: 768px) { 
+	#nav-main { /*hides the default navbar*/
+		box-shadow: none;
+		background-color: transparent;
+	}
+	#nav-main .navbar-nav .nav-item .nav-link {
+		padding: 0 1rem;
+	}
+	#nav-main .navbar-nav .nav-item:last-child .nav-link {
+		padding-right: 0rem;
+	}
+	#nav-main.navbar-shrink { /*show the widescreen navbar*/
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+		background-color: var(--color-offwhite);
+	}
+}
+
+/*masthead background and responsive font sizing*/
+header.masthead {
+	padding-top: 10rem;
+	padding-bottom: 4rem;
+	background: linear-gradient(to bottom, var(--color-offwhite) 0%, rgba(255, 255, 255, 0.5) 30%), url("assets/masthead-bg.jpg"); /*applies gradient to blend navbar and image*/
+	background-color: var(--color-offwhite); /* if the image is unavailable */
+	background-position: center; /* center the image */
+	background-repeat: no-repeat; /* not to repeat the image */
+	background-size: cover; /* resize to cover the entire container */
+}
+.line-scale {
+	font-size: calc(2vw + 0.7rem); /* resize in proportion to window */
+}
+
+.bg-accent {
+	background-color: var(--color-accent);
+}
