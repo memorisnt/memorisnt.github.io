@@ -24,9 +24,24 @@ body {
 	height: 100%;
 	background-color: var(--color-offwhite);
 }
-
 section {
 	line-height: 1.6rem;
+}
+
+/*custom background color using accent*/
+.bg-accent {
+	background-color: var(--color-accent);
+}
+
+/*custom other mark colors*/
+.mark-pink {
+	background-color: rgba(255, 160, 255, 0.65);
+}
+.mark-green {
+	background-color: rgba(100, 255, 100, 0.65);
+}
+.mark-blue {
+	background-color: rgba(100, 255, 255, 0.65);
 }
 
 /*navbar default, taking mobile screens as default*/
@@ -49,7 +64,7 @@ section {
 	text-shadow: 0.1rem 0.1rem 0 var(--color-accent) !important; /*prevent overriding as the page is scrolled, doesn't work otherwise*/
 }
 
-/*when wide enough screen; value follows bootstrap's breakpoint, 576 for sm, 768 for md, 992 for lg*/
+/*navbar changes when wide enough screen (min-width value follows bootstrap's breakpoint, 576 for sm, 768 for md, 992 for lg)*/
 @media (min-width: 768px) { 
 	#nav-main { /*hides the default navbar*/
 		box-shadow: none;
@@ -67,7 +82,7 @@ section {
 	}
 }
 
-/*masthead background and responsive font sizing*/
+/*masthead background*/
 header.masthead {
 	padding-top: 10rem;
 	padding-bottom: 4rem;
@@ -77,10 +92,16 @@ header.masthead {
 	background-repeat: no-repeat; /* not to repeat the image */
 	background-size: cover; /* resize to cover the entire container */
 }
+
+/*masthead supporting lines responsive font sizing*/
 .line-scale {
 	font-size: calc(2vw + 0.7rem); /* resize in proportion to window */
 }
 
-.bg-accent {
-	background-color: var(--color-accent);
+/*floating action button*/
+.social-button {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
