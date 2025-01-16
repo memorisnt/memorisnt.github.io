@@ -50,7 +50,7 @@
 					<h1 class="display-2"><del>memorise</del></h1>
 				</div>
 				<div class="col-md-auto mx-1 px-1"> <!--same as above, but must be indicated separately-->
-					<span class="h1 display-2" id="cycled-word"><mark>learn</mark> </span> <!--makes this word change over time via javascript, trailing whitespace is important for spacing, INCOMPLETE-->
+					<span class="h1 display-2" id="cycled-word"><mark class="mark-accent">learn</mark> </span> <!--makes this word change over time via javascript, trailing whitespace is important for spacing, INCOMPLETE-->
 					<span class="h1 display-2">Physics</span> <!--split up and used span to prevent extra line breaks and to isolate word to be changed-->
 				</div>
 			</div>
@@ -78,11 +78,11 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-11">
+				<div class="col-md-10"> <!--chose 10/12 so paragraph doesn't spread too wide on widescreen-->
 					<h5><br>Hello! I'm an ex-MOE physics tutor who has taught in schools like RGS and SNGS.</h5>
-					<h6><br>Students like my lessons for my energy and how I make abstract concepts <mark>relatable, digestible and hence enjoyable!</mark></h6>
-					<h6>I believe constructing knowledge and developing skills are highly personal,	so I make the effort to <mark>connect with every student, diagnose their unique challenges,
-						and journey together</mark>, no matter how low things might be.</h6>
+					<h6><br>Students like my lessons for my energy and how I make abstract concepts <mark class="mark-accent">relatable, digestible and hence enjoyable!</mark></h6>
+					<h6>I believe constructing knowledge and developing skills are highly personal.
+						Hence I make the effort to <mark class="mark-accent">connect with every student, diagnose their unique challenges, and journey together</mark>, no matter how low things might be.</h6>
 				</div>
 			</div>
 		</section>
@@ -95,31 +95,32 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6">
+					<button class="btn bg-primary" id="tldr-toggler">TLDR</button>
 					<h5><br>#1: Memorise? Memofall.</h5>
-					<h6>Many students fall flat when force-memorising Physics.
+					<h6 class="tldr">Many students fall flat when force-memorising Physics.
 						With limited memory space, students struggle by the end of the syllabus.</h6>
-					<h6><mark>Memorising is often inefficient</mark>, unlike understanding, organising and making links, which take time and expertise, but pays off.</h6>
-					<h6>It also often does not help much in application, unless even more effort is spent memorising every scenario.</h6>
+					<h6 class="tldr"><mark class="mark-accent">Memorising is often inefficient</mark>, unlike understanding, organising and making links, which take time and expertise, but pays off.</h6>
+					<h6 class="tldr">It also often does not help much in application, unless even more effort is spent memorising every scenario.</h6>
 					<h5><br>#2: Mass-produced, fast-food education.</h5>
-					<h6>There are good schools and tuition centres out there, but <mark class="mark-pink">class sizes can often be overloaded</mark>.
+					<h6 class="tldr">There are good schools and tuition centres out there, but <mark class="mark-pink">class sizes can often be overloaded</mark>.
 						Even in large tuition centres, lessons are pre-decided, catering only to a perceived majority.</h6>
-					<h6>Physics deals with math, language, visualisation and application skills.
+					<h6 class="tldr">Physics deals with math, language, visualisation and application skills.
 						Hence, many end up falling behind based on their different weaknesses.
 						Introverts especially may not get the most out of the lesson.
 						Without sufficient attention and personalisation, many latent issues in learning can go undiscovered.</h6>
 				</div>
 				<div class="col-md-6">
 					<h5><br>#3: Myopic and superficial focus on grades.</h5>
-					<h6>Many focus on subject-specific content and exam grades.
+					<h6 class="tldr">Many focus on subject-specific content and exam grades.
 						This may not be transferrable (e.g. skills from 1 subject to another) nor long-term (e.g. how to prepare for university, jobs and in society).</h6>
-					<h6>Furthermore, <mark class="mark-green">grades are but a diagnosis of some deeper symptoms</mark>, such as:
+					<h6 class="tldr">Furthermore, <mark class="mark-green">grades are but a diagnosis of some deeper symptoms</mark>, such as:
 						<ul>
 						<li>poor study habits</li>
 						<li>inefficient study methodology</li>
 						<li>difficulties in focusing, or</li>
 						<li>struggling to be motivated and on-task.</li>
 						</ul></h6>
-					<h6>These symptoms in turn have <mark class="mark-blue">root causes</mark>, such as:
+					<h6 class="tldr">These symptoms in turn have <mark class="mark-blue">root causes</mark>, such as:
 					<ul>
 						<li>attention deficiency</li>
 						<li>neurodivergence</li>
@@ -127,7 +128,7 @@
 						<li>even neglecting of general well-being (especially sleep!),</li>
 						<li>and more.</li>
 					</ul></h6>
-					<h6>Hence, even if grades is the end goal, a good time investment would be to develop important thinking skills, especially metacognitive skills.
+					<h6 class="tldr">Hence, even if grades is the end goal, a good time investment would be to develop important thinking skills, especially metacognitive skills.
 						This will naturally boost study and exam skills in and beyond Physics, and often with greater success.</h6>
 				</div>
 			</div>
@@ -137,15 +138,15 @@
 				</div>
 				<div class="col">
 					<h5><br><strong># A Memorisn't Solution #</strong></h5>
-					<h6>We all easily remember fun, funny, and fantastic times.
-						<mark>By crafting impactful, memorable lessons</mark> (experiments, demos, toys, simulations, daily objects), I help students find retention a breeze.</h6>
-					<h6>Instead of pure memorising, I partner students in <mark>constructing their understanding of concepts</mark>.
+					<h6 class="tldr">We all easily remember fun, funny, and fantastic times.
+						<mark class="mark-accent">By crafting impactful, memorable lessons</mark> (experiments, demos, toys, simulations, daily objects), I help students find retention a breeze.</h6>
+					<h6 class="tldr">Instead of pure memorising, I <mark class="mark-accent">guide students in constructing their understanding of concepts</mark>.
 						I take the time to help them form their own words, draw their own diagrams, and build up their own genuine understanding.</h6>
-					<h6>I also believe in the effectiveness of small group learning.
+					<h6 class="tldr">I also believe in the effectiveness of small group learning.
 						Hence, I tutor <mark class="mark-pink">classes of up to 3 max</mark> unless requested.
 						This allows me to better interact with and engage each student, especially those introverted like me!</h6>
-					<h6>I use a <mark class="mark-green">medical consultation approach</mark> (diagnose-treat-observe), having had much success and positive feedback with students.
-					<h6>Over the years, while I did help many in Physics, it was also exciting to go beyond and into the roots.
+					<h6 class="tldr">I use a <mark class="mark-green">personalised medical consultation approach</mark> (diagnose-treat-observe), having had much success and positive feedback with students.
+					<h6 class="tldr">Over the years, while I did help many in Physics, it was also exciting to go beyond and into the roots.
 						With my <mark class="mark-blue">qualifications in pedagogy, strong interest in psychology, years of experience and passion to help students</mark> succeed not just in Physics but in life, I have:
 						<ul>
 						<li>helped students understand themselves better,</li>
@@ -153,10 +154,10 @@
 						<li>guided students to become better at studying, and</li>
 						<li>even helped one start their journey to recognising neurodivergence and eventually clinically diagnosing ADHD.</li>
 						</ul></h6>
-					<h6>It is an honour to have my past students' success and honest review of my teaching as my greatest testament!</h6>
-					<h6>Hence for those who read all the way here, do note that if you are friends with/referred by my ex-students,
+					<h6 class="tldr">It is an honour to have my past students' success and honest review of my teaching as my greatest testament!</h6>
+					<h6 class="tldr">Hence for those who read all the way here, do note that if you are friends with/referred by my ex-students,
 						simply post an instagram photo of the 2 of you with @memorisnt_sg tagged to enjoy $50 off the first lesson!
-					<h6>I am excited to continue helping more, so do reach out if you're looking for capable help!</h6>
+					<h6 class="tldr">I am excited to continue helping more, so do reach out if you're looking for capable help!</h6>
 				</div>
 			</div>
 		</section>
@@ -165,9 +166,9 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h2>Giving Back</h2>
-					<h6><br>My pro-bono goal is in <mark>helping students with visual impairment</mark>. Please reach out if you're looking to collaborate or find out more.</h6>
+					<h6><br>My pro-bono goal is in helping students with visual impairment. Please reach out if you're looking to collaborate or find out more.</h6>
 					<h6>Shout-out to my fellow entrepreneur, the inspiring Jeniyanti Rijanto, who works diligently to help students with neurodivergence (we call them superpowers!).
-						Find out more at <mark><a href=https://catchwiselearning.com/>Catchwise Learning</a></mark>.</h6>
+						Find out more at <a href=https://catchwiselearning.com/>Catchwise Learning</a>.</h6>
 				</div>
 				<div class="col-md-6">
 					<img class="img-fluid rounded-3" src="assets/probono.jpg" alt="Giving Back">
@@ -183,14 +184,18 @@
 				<div class="col-md-6">
 					<h2>FAQ</h2>
 					<h5><br>What classes do you tutor?</h5>
-					<h6><mark>Physics: IP, O Level (Express, G3) and A Level.</mark><br>Math, Lower Sec Science, Coding: By request only.</h6>
-					<h5><br>What are the lesson rates?</h5>
-					<h6>Year 3-4 (Sec 3-4): 80-100/hr.<br>Year 5-6 (JC 1-2): 100-120/hr.<br>(range indicates group or individual sign-ups, and needs of the student)</h6>
-					<h6>All sign-ups come with <mark>free and easy use of the studio for studying during opening hours any day</mark>.
+					<h6>Physics: IP, O Level and A Level.<br>
+						Math, Lower Sec Science: upon request.</h6>
+					<h5><br>When are classes held?</h5>
+					<h6>Mon-Fri: 3-9pm<br>
+						Weekends: any time upon request</h6>
+					<h5><br>What are the rates?</h5>
+					<h6>Sec 3-4: 80-100/hr.<br>JC 1-2: 100-120/hr.</h6>
+					<h6>(ranges for group or individual sign-ups, and needs of the student)</h6>
+					<h6>Students can come by the studio to study during opening hours.
 						No lock in fees, no admin fees, no deposits, no GST. Simply pay any time in advance or before the start of the lesson(s).
 					<h5><br>How are class sizes determined?</h5>
-					<h6>Students' preference and experience in mixing compatible students in the same group.
-						Harnessing the power of Bandura's Social Learning Theory, and Vygotsky's Zone of Proximal Development, since NIE days!</h6>
+					<h6>Students' needs, preferences and compatibility.
 					<h6><br>This FAQ will be updated for further questions soon!
 						In the meantime, feel free to contact me and send me your questions in the channels below.</h6>
 				</div>
@@ -201,9 +206,9 @@
 			<div class="row">
 				<div class="col-md-10">
 					<h2>Visit Memorisn't Studio, #02-54</h2>
-					<h5><br>Located right outside <mark>Havelock MRT Exit 5</mark>!</h5>
-					<h6>Take a quick 30 seconds walk from the exit with the directions below.</h6>
-					<h6>Or walk into <mark>Concorde Shopping Centre</mark> from the hotel lobby of <mark>Holiday Inn Atrium</mark>.</h6>
+					<h5><br>Located right outside <mark class="mark-accent">Havelock MRT Exit 5</mark>!</h5>
+					<h6>Take a quick 30 seconds walk from the exit with the directions below.<br>
+						Or walk into Concorde Shopping Centre from the hotel lobby of Holiday Inn Atrium.</h6>
 				</div>
 			</div>
 			<div class="row justify-content-center text-center py-3">
@@ -227,9 +232,9 @@
 				<div class="col-md-6">
 					<div>
 						<h2><br>Sign up Here!</h2>
-						<a href="https://tinyurl.com/memorisnt"><h5><mark>https://tinyurl.com/memorisnt</mark></h5></a>
+						<a href="https://tinyurl.com/memorisnt"><h5><mark class="mark-accent">https://tinyurl.com/memorisnt</mark></h5></a>
 						<h2><br>Get in Touch</h2>
-						<h5><mark>Whatsapp: +65 94831352 (preferred)</mark></h5>
+						<h5><mark class="mark-accent">Whatsapp: +65 94831352 (preferred)</mark></h5>
 						<h5>Telegram: @memorisnt</h5>
 						<h5>Email: memorisnt@gmail.com</h5>
 						<h2><br>Stay Updated</h2>
