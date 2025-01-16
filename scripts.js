@@ -16,10 +16,10 @@ window.addEventListener('DOMContentLoaded', event => {
 			navbarCollapsible.classList.remove('navbar-shrink')
 		} else {
 			navbarCollapsible.classList.add('navbar-shrink')
-		}
+		};
 	};
 	
-	// Shrink the navbar 
+	// Shrink the navbar on start (if relevant at page load)
 	navbarShrink();
 	
 	// Shrink the navbar when page is scrolled
@@ -43,10 +43,22 @@ window.addEventListener('DOMContentLoaded', event => {
 		navResponsiveItem.addEventListener('click', () => {
 			if (window.getComputedStyle(navbarToggler).display !== 'none') {
 				navbarToggler.click();
-			}
+			};
 		});
 	});
 	
+	/*
+	// Function to toggle tldr content visibility
+	const allTldr = document.querySelectorAll('.tldr');
+	const toggleTldr = () => {
+		allTldr.forEach( (item) => {
+			item.classList.toggle('tldr-hide');
+		});
+	};
+	// Link the function to the button click
+	allTldr();
+	document.getElementById('#tldr-toggler').addEventListener('click', toggleTldr);
+
 	/*
 	// Function to cycle through list for the masthead word
 	var cycleCount = 0;
@@ -55,9 +67,10 @@ window.addEventListener('DOMContentLoaded', event => {
 		document.querySelector('#cycled-word').inner(wordArray[cycleCount % wordArray.length]);
 		cycleCount++;
 		setTimeout(cycleWords, 1000);
-	});
+	};
 	
 	// Change the masthead word
 	cycleWords();
+	
 	*/
 });
