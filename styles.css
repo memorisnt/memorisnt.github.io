@@ -13,7 +13,6 @@
 	--color-plain: rgba(30, 30, 30, 1);
 	--color-accent: rgba(255, 210, 0, 1);
 	--color-offwhite: rgba(255, 255, 250, 1);
-	--bs-highlight-bg: rgba(255, 210, 0, 0.65);
 }
 html {
 	height: 100%;
@@ -34,14 +33,27 @@ section {
 }
 
 /*custom other mark colors*/
+.mark-accent {
+	background-color: rgba(255, 210, 0, 0.65);
+	color: var(--color-plain) !important;
+}
 .mark-pink {
 	background-color: rgba(255, 160, 255, 0.65);
+	color: var(--color-plain) !important;
 }
 .mark-green {
 	background-color: rgba(100, 255, 100, 0.65);
+	color: var(--color-plain) !important;
 }
 .mark-blue {
 	background-color: rgba(100, 255, 255, 0.65);
+	color: var(--color-plain) !important;
+}
+
+/* for tldr hiding*/
+
+.tldr-hide {
+	color: var(--color-offwhite);
 }
 
 /*navbar default, taking mobile screens as default*/
