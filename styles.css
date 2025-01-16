@@ -1,12 +1,6 @@
 @charset "UTF-8";
 
-/*!
-* Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
-*/
-
-/*general page setup*/
+/*1- general page setup*/
 :root {
 	--bs-font-sans-serif: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -27,12 +21,12 @@ section {
 	line-height: 1.6rem;
 }
 
-/*custom background color using accent*/
+/*2- custom bootstrap class shortcut for element background color using accent*/
 .bg-accent {
 	background-color: var(--color-accent);
 }
 
-/*custom other mark colors*/
+/*3- custom text bg colors for other mark colors*/
 .mark-accent {
 	background-color: rgba(255, 210, 0, 0.65);
 	color: var(--color-plain) !important;
@@ -50,13 +44,44 @@ section {
 	color: var(--color-plain) !important;
 }
 
-/* for tldr hiding*/
-
+/*4- custom text colors for tldr hiding, with fading*/
+.tldr {
+	color: rgba(240, 240, 235, 1);
+	transition: color 0.5s;
+}
 .tldr-hide {
-	color: var(--color-offwhite);
+	color: var(--color-plain);
+	transition: color 0.5s;
 }
 
-/*navbar default, taking mobile screens as default*/
+/*5a- masthead background*/
+header.masthead {
+	padding-top: 10rem;
+	padding-bottom: 4rem;
+	background: linear-gradient(to bottom, var(--color-offwhite) 0%, rgba(255, 255, 255, 0.5) 30%), url("assets/masthead-bg.jpg"); /*applies gradient to blend navbar and image*/
+	background-color: var(--color-offwhite); /* if the image is unavailable */
+	background-position: center; /* center the image */
+	background-repeat: no-repeat; /* not to repeat the image */
+	background-size: cover; /* resize to cover the entire container */
+}
+
+/*5b- masthead supporting lines responsive font sizing*/
+.line-scale {
+	font-size: calc(2vw + 0.7rem); /* resize in proportion to window */
+}
+.line2-scale {
+	font-size: calc(5vw + 0.7rem); /* resize in proportion to window */
+}
+
+/*6- floating action button*/
+.social-button {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/*7a- navbar defaults, taking mobile screens as default*/
 #nav-main {
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 	background-color: var(--color-offwhite);
@@ -76,7 +101,7 @@ section {
 	text-shadow: 0.1rem 0.1rem 0 var(--color-accent) !important; /*prevent overriding as the page is scrolled, doesn't work otherwise*/
 }
 
-/*navbar changes when wide enough screen (min-width value follows bootstrap's breakpoint, 576 for sm, 768 for md, 992 for lg)*/
+/*7b- navbar changes when wide enough screen (min-width value follows bootstrap's breakpoint, 576 for sm, 768 for md, 992 for lg)*/
 @media (min-width: 768px) { 
 	#nav-main { /*hides the default navbar*/
 		box-shadow: none;
@@ -94,26 +119,7 @@ section {
 	}
 }
 
-/*masthead background*/
-header.masthead {
-	padding-top: 10rem;
-	padding-bottom: 4rem;
-	background: linear-gradient(to bottom, var(--color-offwhite) 0%, rgba(255, 255, 255, 0.5) 30%), url("assets/masthead-bg.jpg"); /*applies gradient to blend navbar and image*/
-	background-color: var(--color-offwhite); /* if the image is unavailable */
-	background-position: center; /* center the image */
-	background-repeat: no-repeat; /* not to repeat the image */
-	background-size: cover; /* resize to cover the entire container */
-}
-
-/*masthead supporting lines responsive font sizing*/
-.line-scale {
-	font-size: calc(2vw + 0.7rem); /* resize in proportion to window */
-}
-
-/*floating action button*/
-.social-button {
-	position: fixed;
-	bottom: 2rem;
-	right: 2rem;
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
+/* Learnt a lot from:
+* Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
+*/

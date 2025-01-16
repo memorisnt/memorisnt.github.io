@@ -1,10 +1,32 @@
-/*!
-* Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
-*/
-
 window.addEventListener('DOMContentLoaded', event => {
+	
+	/*1- Tldr Toggler*/
+	
+	// Grab the toggler from the html
+	const tldrToggler = document.getElementById('tldr-toggler');
+	
+	// Link the function to the button click, directly nested the function to toggle tldr content visibility
+	tldrToggler.addEventListener('click', () => {
+		const grey = document.querySelectorAll('.tldr');
+		grey.forEach(e1 => e1.classList.toggle('tldr-hide'));
+	}, false);
+	
+	/*2- Keyword Cycling*/
+	
+	// Function to cycle through list for the masthead word
+	var wordList = ['learn', 'enjoy', 'understand', 'appreciate', 'excel at', 'love', 'get'];
+	var wordCounter = 0;
+	function cycleKeywords() {   // function to perform changes to h1
+		let e2 = document.getElementById('keyword');
+		e2.textContent = wordList[wordCounter % wordList.length];
+		wordCounter++;
+	}
+	
+	// Change keyword on page load and every x milliseconds
+	cycleKeywords();
+	setInterval(cycleKeywords, 1500);
+	
+	/*3- Responsive Navbar*/
 	
 	// Function to toggle navbar's 'shrink' label
 	var navbarShrink = function () {
@@ -46,31 +68,9 @@ window.addEventListener('DOMContentLoaded', event => {
 			};
 		});
 	});
-	
-	/*
-	// Function to toggle tldr content visibility
-	const allTldr = document.querySelectorAll('.tldr');
-	const toggleTldr = () => {
-		allTldr.forEach( (item) => {
-			item.classList.toggle('tldr-hide');
-		});
-	};
-	// Link the function to the button click
-	allTldr();
-	document.getElementById('#tldr-toggler').addEventListener('click', toggleTldr);
-
-	/*
-	// Function to cycle through list for the masthead word
-	var cycleCount = 0;
-	var cycleWords = function () {
-		var wordArray = ['learn ', 'love ', 'understand ', 'enjoy ', 'appreciate '];
-		document.querySelector('#cycled-word').inner(wordArray[cycleCount % wordArray.length]);
-		cycleCount++;
-		setTimeout(cycleWords, 1000);
-	};
-	
-	// Change the masthead word
-	cycleWords();
-	
-	*/
 });
+
+/* Learnt a lot from:
+* Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
+*/

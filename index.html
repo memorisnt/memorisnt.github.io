@@ -47,11 +47,11 @@
 			<h1 class="text-center line-scale py-md-2">Helping students</h1> <!--makes this line styled in css for responsive sizing, extra line buffer for widescreen-->
 			<div class="row justify-content-center text-center pb-5"> <!--first is to put all to arrange all boxes in the centre of the window, second is for text in each box to be centralised-->
 				<div class="col-md-auto mx-1 px-1"> <!--boxes side by side for widescreen but past breakpoint they stack up, buffers are to simulate an extra character space-->
-					<h1 class="display-2"><del>memorise</del></h1>
+					<span class="h1 line2-scale"><del>memorise</del></span>
 				</div>
 				<div class="col-md-auto mx-1 px-1"> <!--same as above, but must be indicated separately-->
-					<span class="h1 display-2" id="cycled-word"><mark class="mark-accent">learn</mark> </span> <!--makes this word change over time via javascript, trailing whitespace is important for spacing, INCOMPLETE-->
-					<span class="h1 display-2">Physics</span> <!--split up and used span to prevent extra line breaks and to isolate word to be changed-->
+					<span class="h1 line2-scale"><mark class="mark-accent" id="keyword">learn</mark></span> <!--makes this word change over time via javascript, trailing whitespace is important for spacing, INCOMPLETE-->
+					<span class="h1 line2-scale">Physics</span> <!--split up and used span to prevent extra line breaks and to isolate word to be changed-->
 				</div>
 			</div>
 			<div class="pt-md-5" style="text-align:center"> <!--padding with above to position button but only more for widescreen, bottom padding handled by css with masthead background-->
@@ -61,7 +61,7 @@
 		
 		<!--Floating Action Button-->
 		<div>
-			<a class="btn btn-lg rounded-circle bg-accent social-button" href="https://wa.me/6594831352?text=Hi">
+			<a class="btn btn-lg rounded-circle bg-accent social-button" href="https://wa.me/6594831352?text=Hi"> <!--floating handled by css-->
 				<i class="bi bi-whatsapp fs-3"></i>
 			</a>
 		</div>
@@ -82,7 +82,8 @@
 					<h5><br>Hello! I'm an ex-MOE physics tutor who has taught in schools like RGS and SNGS.</h5>
 					<h6><br>Students like my lessons for my energy and how I make abstract concepts <mark class="mark-accent">relatable, digestible and hence enjoyable!</mark></h6>
 					<h6>I believe constructing knowledge and developing skills are highly personal.
-						Hence I make the effort to <mark class="mark-accent">connect with every student, diagnose their unique challenges, and journey together</mark>, no matter how low things might be.</h6>
+						Hence I make the effort to <mark class="mark-accent">connect with every student, diagnose their unique challenges, and journey together</mark>, from whatever starting point.</h6>
+					<h6>- Joshua Lee</h6>
 				</div>
 			</div>
 		</section>
@@ -91,13 +92,13 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h2>The Problem</h2>
+					<button class="btn active sticky-bottom" type="button" id="tldr-toggler" data-bs-toggle="button" aria-pressed="true">click to read in full</button>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6">
-					<button class="btn bg-primary" id="tldr-toggler">TLDR</button>
 					<h5><br>#1: Memorise? Memofall.</h5>
-					<h6 class="tldr">Many students fall flat when force-memorising Physics.
+					<h6 class="tldr">Many students fall flat in force-memorising Physics.
 						With limited memory space, students struggle by the end of the syllabus.</h6>
 					<h6 class="tldr"><mark class="mark-accent">Memorising is often inefficient</mark>, unlike understanding, organising and making links, which take time and expertise, but pays off.</h6>
 					<h6 class="tldr">It also often does not help much in application, unless even more effort is spent memorising every scenario.</h6>
@@ -120,7 +121,7 @@
 						<li>difficulties in focusing, or</li>
 						<li>struggling to be motivated and on-task.</li>
 						</ul></h6>
-					<h6 class="tldr">These symptoms in turn have <mark class="mark-blue">root causes</mark>, such as:
+					<h6 class="tldr">These <mark class="mark-blue">symptoms in turn have root causes</mark>, such as:
 					<ul>
 						<li>attention deficiency</li>
 						<li>neurodivergence</li>
@@ -140,14 +141,14 @@
 					<h5><br><strong># A Memorisn't Solution #</strong></h5>
 					<h6 class="tldr">We all easily remember fun, funny, and fantastic times.
 						<mark class="mark-accent">By crafting impactful, memorable lessons</mark> (experiments, demos, toys, simulations, daily objects), I help students find retention a breeze.</h6>
-					<h6 class="tldr">Instead of pure memorising, I <mark class="mark-accent">guide students in constructing their understanding of concepts</mark>.
+					<h6 class="tldr">Instead of pure memorising, <mark class="mark-accent">I guide students in constructing their understanding of concepts</mark>.
 						I take the time to help them form their own words, draw their own diagrams, and build up their own genuine understanding.</h6>
 					<h6 class="tldr">I also believe in the effectiveness of small group learning.
-						Hence, I tutor <mark class="mark-pink">classes of up to 3 max</mark> unless requested.
+						Hence, <mark class="mark-pink">I tutor classes of up to 3 max</mark> unless requested.
 						This allows me to better interact with and engage each student, especially those introverted like me!</h6>
-					<h6 class="tldr">I use a <mark class="mark-green">personalised medical consultation approach</mark> (diagnose-treat-observe), having had much success and positive feedback with students.
+					<h6 class="tldr"><mark class="mark-green">I use a personalised medical consultation approach</mark> (diagnose-treat-observe), having had much success and positive feedback with students.
 					<h6 class="tldr">Over the years, while I did help many in Physics, it was also exciting to go beyond and into the roots.
-						With my <mark class="mark-blue">qualifications in pedagogy, strong interest in psychology, years of experience and passion to help students</mark> succeed not just in Physics but in life, I have:
+						With my qualifications in pedagogy, strong interest in psychology, years of experience and passion in <mark class="mark-blue">helping students succeed not just in Physics but beyond</mark>, I have:
 						<ul>
 						<li>helped students understand themselves better,</li>
 						<li>have partnered with students and parents identify and tackle mitigating factors from the ground up,</li>
@@ -170,7 +171,7 @@
 					<h6>Shout-out to my fellow entrepreneur, the inspiring Jeniyanti Rijanto, who works diligently to help students with neurodivergence (we call them superpowers!).
 						Find out more at <a href=https://catchwiselearning.com/>Catchwise Learning</a>.</h6>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 pt-2">
 					<img class="img-fluid rounded-3" src="assets/probono.jpg" alt="Giving Back">
 				</div>
 			</div>
@@ -178,21 +179,21 @@
 		<!--FAQ-->
 		<section class="container pt-3 pt-md-5" id="faq">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-md-6 pt-2">
 					<img class="img-fluid rounded-3" src="assets/faq.jpg" alt="FAQ">
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 pt-2">
 					<h2>FAQ</h2>
 					<h5><br>What classes do you tutor?</h5>
 					<h6>Physics: IP, O Level and A Level.<br>
-						Math, Lower Sec Science: upon request.</h6>
+						IB, IGCSE, Math, Lower Sec Science: upon request.</h6>
 					<h5><br>When are classes held?</h5>
 					<h6>Mon-Fri: 3-9pm<br>
 						Weekends: any time upon request</h6>
 					<h5><br>What are the rates?</h5>
 					<h6>Sec 3-4: 80-100/hr.<br>JC 1-2: 100-120/hr.</h6>
-					<h6>(ranges for group or individual sign-ups, and needs of the student)</h6>
-					<h6>Students can come by the studio to study during opening hours.
+					<h6>(group / solo sign-ups / needs of the student)</h6>
+					<h6>Benefits: students can come by to study during opening hours.
 						No lock in fees, no admin fees, no deposits, no GST. Simply pay any time in advance or before the start of the lesson(s).
 					<h5><br>How are class sizes determined?</h5>
 					<h6>Students' needs, preferences and compatibility.
@@ -229,10 +230,10 @@
 					<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8088032112178!2d103.8342156!3d1.2889233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1989c6509787%3A0xcabdfab8ff791a30!2sMemorisn&#39;t!5e0!3m2!1sen!2ssg!4v1736617846239!5m2!1sen!2ssg"
 					width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 pt-2">
 					<div>
-						<h2><br>Sign up Here!</h2>
-						<a href="https://tinyurl.com/memorisnt"><h5><mark class="mark-accent">https://tinyurl.com/memorisnt</mark></h5></a>
+						<h2>Sign up Here!</h2>
+						<a href="https://tinyurl.com/memorisnt"><h5>https://tinyurl.com/memorisnt</h5></a>
 						<h2><br>Get in Touch</h2>
 						<h5><mark class="mark-accent">Whatsapp: +65 94831352 (preferred)</mark></h5>
 						<h5>Telegram: @memorisnt</h5>
@@ -241,7 +242,6 @@
 						<h5>Website: memorisnt.github.io</h5>
 						<h5>Instagram: @memorisnt_sg</h5>
 						<h5>Telegram: @memorisnt_sg</h5>
-						<h6><br><br>Feel free to share these links!</h6>
 					</div>
 				</div>
 			</div>
