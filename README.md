@@ -1,9 +1,9 @@
 # memorisnt.github.io
 
-[![License: MIT][mit-shield][mit]
+[![License: MIT][mit-shield]][mit]
 
 Coding work is licensed under a 
-[MIT License][cc-by-nc-nd]
+[MIT License][cc-by-nc-nd].
 
 [mit]: https://opensource.org/licenses/MIT
 [mit-shield]: https://img.shields.io/badge/License-MIT-yellow.svg
