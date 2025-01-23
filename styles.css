@@ -73,7 +73,7 @@ header.masthead {
 	font-size: calc(5vw + 0.7rem); /* resize in proportion to window */
 }
 
-/*6- floating action button*/
+/*6a- floating action button*/
 .social-button {
 	position: fixed;
 	bottom: 2rem;
