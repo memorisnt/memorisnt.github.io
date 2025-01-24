@@ -1,7 +1,5 @@
 # memorisnt.github.io
 
------
-
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-shield]][cc-by-nc-nd]
 
 Non-coding work (all files under "/assets") is licensed under a
